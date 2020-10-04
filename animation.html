@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animations and keyframes</title>
+
+    <style>
+        .container{
+            display:flex;
+            background-color: darkblue;
+        }
+        .box{
+            display: flex;
+            background-color: lightseagreen;
+            height:250px;
+            width:250px;
+            justify-content: center;
+            font-size:x-large;
+            border-radius: 50px;
+            text-align: center;
+            align-items: center;
+            position: relative;
+            /* animation-name: nikhil; */
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: alternate;
+            animation-timing-function: ease-out;
+            animation-delay: 1sec;
+            animation-direction: reverse;
+            animation-name: nikhil2;
+
+
+        }
+        @keyframes nikhil2{
+            0%{
+                background-color: red;
+                top:120px;
+                left:200px;
+            }
+            50%{
+                left:20px;
+                top:10px;
+                right:400px;
+                background-color: green;
+            }
+        }
+    @keyframes nikhil{
+        from{
+            width:200px;
+        }
+        to{
+            width:500px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>this is a box</p>
+        </div>
+    </div>
+</body>
+</html>
