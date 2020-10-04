@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FITNESS GYM</title>
+    <link rel="stylesheet" href="stylegym.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <style>
+        .header{
+            box-sizing: border-box;
+        }
+         body{
+             background-color: rgb(180, 180, 180);
+             color:white;
+             margin: 0;
+             padding: 0;
+             background-image: url('https://wallpaperaccess.com/full/1245044.jpg');
+             width: 100%;
+             height:900px;
+           
+         }
+         .left{
+             /* border:2px solid red; */
+             height:150px;
+             width:200px;
+             display: inline-block;
+             /* margin:12px 25px; */
+         }
+         .left img{
+             /* filter:invert(100%); */
+             display: block;
+             margin: 12px auto;
+             height:100px;
+             width:150px;
+             border-radius: 30px;
+             /* border:3px solid rgb(253, 155, 43) */
+         }
+         .left h3{
+            font-family: 'Permanent Marker', cursive;
+            font-size: x-large;
+             text-align: center;
+         }
+.mid{
+  position:absolute;
+  top:40px;
+    /* border:3px solid orange; */
+
+    display: inline-block;
+     width:70%;
+      
+     box-sizing: border-box;
+     /* margin:auto 0; */
+     text-align: center;
+     padding:10px;
+    
+     
+
+
+  
+   }
+.right{
+    display: inline-block;
+    position: absolute;
+    top:40px;
+
+    right:40px;
+    /* border:2px solid green; */
+}
+.navbar li a{
+    
+   bottom:10px;
+    margin: 6px auto;
+    font-family: 'Bungee', cursive;
+    font-size: x-large;
+    color:white;
+    text-decoration: none;
+    display:inline-block; 
+    text-align: center;
+    height:40px;
+    
+}
+.navbar li{
+    text-align: center;
+    height:inherit;
+    display:inline-block
+}
+.navbar li a.active,.navbar li a:hover{
+      background-color:rgba(8, 1, 46, 0.61);
+}
+.mid ul{
+    height:53px;
+}
+.button{
+    color:rgb(255, 255, 255);
+    background-color:rgb(48, 48, 48);
+    height:38px;
+    width:87px;
+    cursor:pointer;
+    border-radius: 15px;
+    
+    font-family: 'Bungee', cursive;
+    font-size: 12px;
+}
+.button:hover{
+    background-color: white;
+    color:black;
+}
+.button:active{
+    background-color: rgb(1, 4, 37);
+    color:rgb(112, 149, 250);
+}
+.body{
+    /* border:3px solid rgb(216, 214, 214); */
+    display:block;
+    width:50%;
+    margin-left: 100px;
+    height:350px;
+    text-align: center;
+}
+.body h1{
+    margin:10px auto;
+    font-family: 'Bungee', cursive;
+}
+.form input{
+    font-family: 'Bungee', cursive;
+    font-size: 10px;
+background-color: rgb(192, 190, 190);
+height:30px;
+width:300px;
+border-radius: 10px;
+}
+::placeholder{
+    color:rgb(0, 0, 0);
+    text-align: center;
+}
+.form{
+    margin:10px auto;
+}
+.body button{
+    height:30px;
+    width:300px;
+}
+
+
+
+
+    </style>
+</head>
+<body>
+ <header class="header">
+     <div class="left">
+        <img src="https://image.freepik.com/free-vector/fitness-gym-logo-design-inspiration_20029-49.jpg" alt="gym image" height="70" width="80">
+        <h3>FITNESS GYM</h3>
+     </div>
+    
+     <div class="mid">
+        <ul class="navbar">
+            <li>  <a href="#" id="active">HOME</a> </li>
+            <li>  <a href="#">ABOUT</a> </li>
+            <li>  <a href="#">CONTACT US</a> </li>
+            <li>  <a href="#">SUPPORT</a> </li>
+        </ul>
+     </div>
+     <div class="right">
+     <button class="button">
+        CALL US
+     </button>
+     <button class="button"> 
+         EMAIL AT
+     </button>
+     </div>
+ </header>
+ <main>
+     <div class="body">
+       <h1>JOIN THE BEST GYM OF DELHI NOW</h1>       
+        <div class="form">
+         <input type="text" name="" id="" placeholder="enter name here">
+
+        </div>
+        <div class="form"><input type="email" name="" id="" placeholder="your email"></div>
+        <div class="form"><input type="number" name="" id="" placeholder="mobile number"></div>
+        <div class="form"> <input type="text" name="" id="" placeholder="address"></div>
+        <button class="button">SUBMIT NOW</button>
+     </div>
+ </main>
+</body>
+</html>
