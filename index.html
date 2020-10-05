@@ -1,60 +1,261 @@
 <!DOCTYPE html>
-<html lang="en" onkeypress="jump()">
+<html lang="en" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>simplest js game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css2?family=Acme&family=Courgette&family=Dancing+Script:wght@600;700&family=Lobster&family=Philosopher:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Script -->
+  <script src="https://kit.fontawesome.com/ed35c99e08.js" crossorigin="anonymous"></script>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <title>Probnovate</title>
 </head>
+
 <body>
-  <center>
-      <a href="https://tarawat.github.io/website1/"><h1>Anuj</h1></a>
-      <p>Pursuing computer science Engineering at <em><strong><a href="http://www.ipu.ac.in/">GGSIPU</a></strong>.</em></p>
-  </center>
-  <img class="b" src="images/cloud.png" alt="cloud-img"><br>
-  <img class="c" src="images/mountain.png" alt="mountain-img">
-  <hr>
-  <h2>Skills</h2>
-  <table cellspacing="10">
-    <tr>
-      <td>XXXXXXXXXXXXX</td>
-      <td>⭐⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>XXXXXXXXXXXXXX</td>
-      <td>⭐⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>XXXXXXXXXXXXXX</td>
-      <td>⭐⭐⭐⭐</td>
-    </tr>
-    <tr>
-      <td>XXXXXXXXXXXXXXX</td>
-      <td>⭐⭐⭐</td>
-    </tr>
-  </table>
-  <hr>
-  <a href="my Hobbies.html">My Hobbies</a><br>
-  <a href="contact-me.html">Contact me</a>
+
+  <!-- ************************************************Navigation bar************************************************** -->
+
+  <header>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Probnovate</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id='navbarTogglerDemo01'>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="#" class="btn-floating btn-fb mx-1">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" class="btn-floating btn-tw mx-1">
+              <i class="fab fa-twitter"> </i></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#" class="btn-floating btn-tw mx-1">
+              <i class="fab fa-instagram"></i></a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a id="redir" class="nav-link feed" href="#hide">Feedback</a></li>
+          <li class="nav-item">
+            <a id="apply" class="nav-link new" href="#hide2">Apply</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href=""></a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
 
-  <div class="bottom-container">
-    <br>
-    <div class="contact-me">
-      <h2>Get In Touch</h2>
-      <a class="btn" href="mailto:">CONTACT ME</a>
-      <br>
-      <br>
-      <a href="#"><img class="l" src="https://image.flaticon.com/icons/svg/1409/1409945.svg" alt="linkedin-img"></a>
-      <a href="#"><img class="i" src="https://image.flaticon.com/icons/svg/1384/1384063.svg" alt="instagram-img"></a>
-      <a href="#"><img class="p" src="images/faviconcir.png" alt="profile-img">
+
+  <!--*****************************************************Container for Complete Site********************************************* -->
+  <div class="container-fluid backg">
+
+
+    <!-- ********************************************************Left Portion******************************************************** -->
+    <div class="row rowone">
+      <div class="col-md-8 col-12 left-container">
+        <h1 class="hello">Hello</h1>
+      </div>
+
+
+      <!--**************************************************** right portion************************************************************** -->
+
+      <div class="col-md-4 col-12 right-container">
+        <h1 class="what">What are you looking for?</h1>
+
+
+        <!--****************************************** Search Bar Of Categories *************************************************************-->
+        <div class="div search-div">
+          <div class="div search-bar">
+            <i class="fas fa-search fa-2x"></i>
+            <select id="cat" class="css-input" name="catego" placeholder="Categories" onchange=categ(1)>
+              <option value="">Select category</option>
+            </select>
+          </div>
+        </div>
         <br>
-        <a class="footer-link" href="#">LinkedIn</a>
-        <a class="footer-link" href="#">Instagram</a>
-        <a class="footer-link" href="#">Website</a>
-        <p class="right">© 2020 XYZ.</>
-    </div>
-    <p>Score : <span id="scorespan"></span></p>
+
+
+        <!--******************************************* Icons and Buttons of Categories ****************************************************-->
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <button id="Mobile" type="button" class="btn icon-btn">
+                <i class="fas fa-mobile fa-2x"></i>
+              </button>
+            </div>
+            <div class="col-md-3 col-6">
+              <button id="2-wheeler" type="button" class="btn icon-btn">
+                <i class="fas fa-motorcycle fa-2x"></i>
+              </button>
+            </div>
+            <div class="col-md-3 col-6">
+              <button id="Laptop" type="button" class="btn icon-btn">
+                <i class="fas fa-laptop fa-2x"></i>
+              </button>
+            </div>
+            <div class="col-md-3 col-6">
+              <button id="Headphones" type="button" class="btn icon-btn">
+                <i class="fas fa-headphones-alt fa-2x"></i>
+              </button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 col-6">
+              <button id="4-wheeler" type="button" class="btn icon-btn">
+                <i class="fas fa-car fa-2x"></i>
+              </button>
+            </div>
+            <div class="col-md-3 col-6">
+              <button id="TV" type="button" class="btn icon-btn">
+                <i class="fas fa-tv fa-2x"></i>
+              </button>
+            </div>
+            <div class="col-md-3 col-6">
+              <button id="Camera" type="button" class="btn icon-btn">
+                <i class="fas fa-camera fa-2x"></i>
+              </button>
+            </div>
+            <div class="col-md-3 col-6">
+              <button id="Fan/AC/Cooler" type="button" class="btn icon-btn">
+                <i class="fas fa-fan fa-2x"></i>
+              </button>
+            </div>
+          </div>
+
+        </div>
+
+
+        <!--*********************************************** Search Bar for brand********************************************* -->
+        <div class="search-div div">
+          <div class="search-bar">
+            <i class="fas fa-search fa-2x"></i>
+            <select id="brand" class="css-input" name="brands" placeholder="Brands" onchange=brand()>
+              <option>Select Brand</option>
+            </select>
+            <br>
+            <button id="sbmt" type="submit" name="button" class="btn btn-info submit-button btn-sub-">Search</button>
+          </div>
+
+         <!-- **************************************Feedback Form button********************************************************** -->
+          <button id="feed" href="#hide" type="submit" name="button" class="btn btn-info submit-button btn-sub-">Feedback Form</button>
+          <br>
+
+        <!-- *************************************New Brand Suggestion Form button*************************************************** -->
+
+          <button id="new" href="#hide" type="submit" name="button" class="btn btn-info submit-button btn-sub-">New Brand Form</button>
+
+        </div>
+
+
+      </div>
+      <!-- **********************************************Feedback Form**************************************************************** -->
+      <div class="feedback container-fluid" id="hide">
+        <div class="container-fluid heading">
+          <h1><strong>Feedback Form</strong></h1>
+
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <input type="text" name="" value="" placeholder="Name">
+          </div>
+          <div class="col-md-6">
+            <input type="email" name="" value="" placeholder="E-mail">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <textarea class="feedbck" name="name" rows="8" cols="80" placeholder="Message"></textarea>
+          </div>
+          <div class="container-fluid heading">
+            <button id="sbmit" type="submit" name="button" class="btn btn-info submit-button btn-sub-">Submit</button>
+          </div>
+
+        </div>
+      </div>
+
+<!--
+      ***********************************************Dont have your brand form*************************************************************** -->
+
+
+      <div class="feedback container-fluid" id="hide2">
+          <div class="container-fluid heading">
+            <h1><strong>Suggesting Product form</strong></h1>
+
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <input type="text" name="" value="" placeholder="Name">
+            </div>
+              <div class="col-md-6">
+                <input type="email" name="" value="" placeholder="E-mail">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <input type="text" name="" value="" placeholder="Category you find missing">
+              </div>
+                <div class="col-md-6">
+                  <input type="email" name="" value="" placeholder="Brand you find missing">
+                </div>
+              </div>
+
+              <div class="container-fluid heading">
+                <button id="sbmit" type="submit" name="button" class="btn btn-info submit-button btn-sub-">Submit</button>
+              </div>
+
+            </div>
+
+
+
+
+
+
+
+
+      <!-- *********************************************Firebase Addition********************************************************************* -->
+
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-app.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-database.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+       https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/7.17.1/firebase-analytics.js"></script>
+
+
+      <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyAYYCtdJguLPolxQ-kKVgt-_Sgn7CybGlY",
+          authDomain: "projectone-98900.firebaseapp.com",
+          databaseURL: "https://projectone-98900.firebaseio.com",
+          projectId: "projectone-98900",
+          storageBucket: "projectone-98900.appspot.com",
+          messagingSenderId: "95951408186",
+          appId: "1:95951408186:web:8507dcf47860038e3f3903",
+          measurementId: "G-LBZTWBXR9D"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+      </script>
+
+
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="index.js" charset="utf-8"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </body>
-<script src="js.js"></script>
+
 </html>
